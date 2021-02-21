@@ -1227,7 +1227,7 @@ module.exports = kconfig = async (kill, message) => {
 
         case 'welcome':
 			if (!isGroupMsg) return kill.reply(from, mess.error.Gp, id)
-			if (!isOwner) return kill.reply(from, mess.error.Kl, id)
+			if (!isGroupAdmins) return kill.reply(from, mess.error.Kl, id)
             if (args.length !== 1) return kill.reply(from, 'Você esqueceu de colocar se quer ativado [on], ou desativado [off].', id)
 			if (args[0] == 'on') {
                 welkom.push(chat.id)
